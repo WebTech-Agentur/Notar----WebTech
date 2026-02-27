@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process & Fees | NotarWeb</title>
+    <meta name="description"
+        content="Learn about our notarial process and how statutory notary fees are structured. Transparency and clarity for your peace of mind.">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--text-inverse);
+            padding: 12rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem 0;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            height: 100%;
+            width: 2px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .process-step {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 100px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background-color: var(--bg-main);
+            border: 3px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 1;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .process-step:hover .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .step-content {
+            background-color: var(--bg-main);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .fees-section {
+            background-color: var(--bg-light);
+            padding: 5rem 0;
+            border-radius: var(--radius-lg);
+            margin-bottom: 4rem;
+        }
+
+        .fees-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .fees-box {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .fees-box h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .fees-box p {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .process-timeline::before {
+                left: 30px;
+            }
+
+            .step-number {
+                left: 0;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .process-step {
+                padding-left: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <div>
+                    Notar<span>Web</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="process.html" class="active">Process & Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="contact.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">Consultation</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container page-header-content">
+            <h1>Process & Fees</h1>
+            <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">Transparency is the cornerstone
+                of trust. We explain exactly how our collaboration works and how the statutory fees are calculated.</p>
+        </div>
+    </div>
+
+    <!-- The Process Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Your Path to Legal Certainty</h2>
+                <p>Every notarial act follows a structured process to ensure that all parties are fully informed and
+                    their interests are protected.</p>
+            </div>
+
+            <div class="process-timeline reveal">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Contact & Data Collection</h3>
+                        <p>You reach out to us via phone, email, or our online booking system. We will briefly discuss
+                            your request and ask for the necessary key information and documents required to prepare the
+                            draft.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Draft Preparation</h3>
+                        <p>Based on the information provided, we prepare a legally sound draft of the required document.
+                            This draft will be sent to all involved parties (usually by email or postal mail) with
+                            sufficient time for review prior to the appointment.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Review & Consultation</h3>
+                        <p>During the review period, you have the opportunity to ask questions or request changes. If
+                            necessary, we can arrange a comprehensive preliminary consultation to clarify complex legal
+                            consequences.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>The Notarial Recording (Beurkundung)</h3>
+                        <p>At the appointment in our office, the notary reads the entire document aloud to all parties.
+                            This is a vital step to ensure understanding, answer final questions, and make any
+                            last-minute adjustments before the document is signed and sealed.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Execution (Abwicklung)</h3>
+                        <p>After signing, our office takes care of the execution. Depending on the transaction, this
+                            includes communicating with authorities, the land registry, the commercial register, and the
+                            tax office until the matter is fully completed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="contact.html"
+                    class="btn btn-primary">Start the Process Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statutory Fees Section -->
+    <section class="section">
+        <div class="container">
+            <div class="fees-section reveal">
+                <div class="fees-content">
+                    <h2>Transparent & Statutory Fees</h2>
+                    <p>Notaries do not negotiate individual hourly rates. Notary fees in Germany are strictly regulated
+                        by law to ensure absolute neutrality and equal access to justice.</p>
+
+                    <div class="fees-box">
+                        <h3>The Court and Notary Costs Act (GNotKG)</h3>
+                        <p>All notarial fees are calculated exclusively based on the <strong>Court and Notary Costs Act
+                                (Gerichts- und Notarkostengesetz - GNotKG)</strong>. The fees are not determined by the
+                            amount of time spent on your case, but by the so-called "business value" (Geschäftswert) of
+                            the transaction.</p>
+
+                        <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
+                            <strong>Examples of Business Value:</strong> For a property purchase, it is the purchase
+                            price. For a GmbH formation, it is the share capital. For an inheritance contract, it is the
+                            net value of the estate.</p>
+
+                        <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
+                            <strong>Inclusive Services:</strong> The statutory fee for a notarization (Beurkundung)
+                            generally includes the comprehensive preliminary consultation, draft preparation, the actual
+                            recording appointment, and the provision of standard copies.</p>
+
+                        <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
+                            <strong>Execution Costs:</strong> Additional, smaller fees apply for our activities in
+                            executing the document (Vollzugsgebühren) and for expenditures (telephone, postage).</p>
+
+                        <br>
+                        <p style="font-style: italic; color: var(--text-light);">We understand that costs are a concern.
+                            We are happy to provide you with an estimated calculation of the expected notary and court
+                            fees prior to your appointment based on the anticipated business value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-scale-balanced" style="color: var(--accent-color);"></i>
+                        <div>
+                            Notar<span style="color: rgba(255,255,255,0.7)">Web</span>
+                        </div>
+                    </a>
+                    <p>Providing legal certainty with trust and clarity for all your real estate, corporate, family, and inheritance matters.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:15566284478">15566284478</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@notarweb-example.com">info@notarweb-example.com</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="process.html">Process & Fees</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <a href="imprint.html">Legal Notice (Imprint)</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms and Conditions</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NotarWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

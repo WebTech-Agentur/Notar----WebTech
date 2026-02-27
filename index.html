@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notary Office | Legal Certainty with Trust and Clarity</title>
+    <meta name="description"
+        content="Professional notary services offering legal certainty with trust and clarity. Specializing in real estate, corporate, family, and inheritance law.">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Calendly link widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&fit=crop&q=80&w=2000');
+            /* More professional notary-style hero image */
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .intro-image {
+            flex: 1;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .intro-content {
+            flex: 1;
+        }
+
+        .intro-content h3 {
+            color: var(--accent-color);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-main);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-card .btn-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: auto;
+            align-self: center;
+        }
+
+        .service-card .btn-link:hover {
+            color: var(--accent-color);
+            gap: 10px;
+        }
+
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--text-inverse);
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.05;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            color: var(--text-inverse);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <div>
+                    Notar<span>Web</span>
+                </div>
+            </a>
+
+            <div class="nav-content">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="process.html">Process & Fees</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="contact.html" class="btn btn-outline"
+                        style="padding: 8px 16px; font-size: 0.9rem;">Consultation</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Legal certainty with trust and clarity</h1>
+                <p>Ensuring your most important life decisions are legally sound. We offer expert notary services
+                    tailored to your individual and corporate needs.</p>
+                <div class="hero-btns">
+                    <!-- Fixing direct link to contact page instead of broken calendly JS widget in this static view, per user request to redirect directly to booking page -->
+                    <a href="contact.html" class="btn btn-accent">
+                        Book Online Appointment
+                    </a>
+                    <a href="services.html" class="btn btn-outline" style="color: white; border-color: white;">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container intro-section reveal">
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=800"
+                    alt="Professional Notary Signing">
+            </div>
+            <div class="intro-content">
+                <h3>Welcome</h3>
+                <h2>Your Trusted Partner in Legal Matters</h2>
+                <p>At NotarWeb, we understand that legal processes can often seem complex and overwhelming. Our
+                    philosophy is rooted in providing not just legal documentation, but true certainty, trust, and
+                    complete clarity for every client.</p>
+                <p>Whether you are purchasing your dream home, founding a new company, or planning for your family's
+                    future, we ensure that every step is handled with the utmost professionalism, confidentiality, and
+                    care.</p>
+                <br>
+                <a href="about.html" class="btn btn-outline">Learn More About Us <i class="fa-solid fa-arrow-right"
+                        style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="section section-bg-light">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <p>Comprehensive notary services for profound legal security in all areas of your life and business.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h4>Real Estate Law</h4>
+                    <p>Secure transactions for purchasing, selling, or transferring property and creating land charges.
+                    </p>
+                    <a href="services.html#real-estate" class="btn-link">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4>Corporate Law</h4>
+                    <p>Expert legal support for company formations, restructuring, and registry filings.</p>
+                    <a href="services.html#corporate" class="btn-link">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+                    <h4>Family Law</h4>
+                    <p>Customized drafting of marriage contracts, divorce agreements, and adoptions.</p>
+                    <a href="services.html#family" class="btn-link">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <h4>Inheritance Law</h4>
+                    <p>Precise formulation of wills, inheritance contracts, and precautionary powers of attorney.</p>
+                    <a href="services.html#inheritance" class="btn-link">Read More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (Calendly Integration) -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <div class="cta-content">
+                <h2>Ready to secure your future?</h2>
+                <p>Schedule a personal consultation in our Wesseling office quickly and easily through our online
+                    booking system.</p>
+                <a href="contact.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 15px 35px;">
+                    <i class="fa-regular fa-calendar-check" style="margin-right: 10px;"></i> Book Appointment Online
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-scale-balanced" style="color: var(--accent-color);"></i>
+                        <div>
+                            Notar<span style="color: rgba(255,255,255,0.7)">Web</span>
+                        </div>
+                    </a>
+                    <p>Providing legal certainty with trust and clarity for all your real estate, corporate, family, and inheritance matters.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:15566284478">15566284478</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@notarweb-example.com">info@notarweb-example.com</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="process.html">Process & Fees</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <a href="imprint.html">Legal Notice (Imprint)</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms and Conditions</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NotarWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+

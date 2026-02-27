@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | NotarWeb</title>
+    <meta name="description"
+        content="Comprehensive notary services including real estate law, corporate law, family law, and inheritance law. Clear, understandable legal solutions.">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--text-inverse);
+            padding: 12rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .service-detail-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-detail-section:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .service-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-image {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+            display: block;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-icon-large {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list {
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            list-style: none;
+        }
+
+        .service-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .service-list li::before {
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 8px;
+            position: absolute;
+            left: 5px;
+            top: 8px;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 900px) {
+
+            .service-row,
+            .service-row.reverse {
+                flex-direction: column;
+            }
+
+            .service-image img {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <div>
+                    Notar<span>Web</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="process.html">Process & Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container page-header-content">
+            <h1>Our Services</h1>
+            <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">We provide specialized notarial
+                services designed to offer you the highest level of legal security and peace of mind.</p>
+        </div>
+    </div>
+
+    <!-- Real Estate Law -->
+    <section id="real-estate" class="service-detail-section">
+        <div class="container reveal">
+            <div class="service-row">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800"
+                        alt="Real Estate Law">
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-house-chimney service-icon-large"></i>
+                    <h2>Real Estate Law</h2>
+                    <p>Real estate transactions are often the most significant financial decisions in a person's life.
+                        We ensure that your interests are fully protected whether you are buying your first home,
+                        selling commercial property, or transferring real estate within the family.</p>
+                    <p>We handle all aspects of the transaction, ensuring clear titles, verifying land register entries,
+                        and managing the escrow accounts securely.</p>
+
+                    <ul class="service-list">
+                        <li>Real Estate Purchase Agreements (Residential and Commercial)</li>
+                        <li>Creation and Deletion of Land Charges (Grundschulden) & Mortgages</li>
+                        <li>Property Transfers and Gifts within Families</li>
+                        <li>Condominium Declarations (Teilungserklärungen)</li>
+                        <li>Usufruct and Residential Rights (Nießbrauch & Wohnrecht)</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Law -->
+    <section id="corporate" class="service-detail-section">
+        <div class="container reveal">
+            <div class="service-row reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                        alt="Corporate Law">
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-briefcase service-icon-large"></i>
+                    <h2>Corporate Law</h2>
+                    <p>Founding and managing a company requires a solid legal framework. We advise founders, managing
+                        directors, and shareholders on all corporate legal matters. From selecting the right legal
+                        entity to drafting complex shareholder agreements, we ensure your business operations rest on a
+                        legally secure foundation.</p>
+                    <p>We also act as the crucial interface to the commercial register (Handelsregister) for all
+                        required filings.</p>
+
+                    <ul class="service-list">
+                        <li>Company Formations (GmbH, UG, AG, GmbH & Co. KG)</li>
+                        <li>Commercial Register Applications & Amendments</li>
+                        <li>Share Transfers and Capital Increases</li>
+                        <li>Corporate Restructuring & Mergers</li>
+                        <li>Appointment and Dismissal of Managing Directors</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Law -->
+    <section id="family" class="service-detail-section">
+        <div class="container reveal">
+            <div class="service-row">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=800"
+                        alt="Family Law">
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-ring service-icon-large"></i>
+                    <h2>Family Law</h2>
+                    <p>Family law matters require intense empathy combined with precise legal structuring. Statutory
+                        regulations often do not align with individual life plans. We help you create customized, fair
+                        agreements that provide clarity and prevent future emotional and financial disputes during
+                        difficult times.</p>
+
+                    <ul class="service-list">
+                        <li>Drafting of Marriage Contracts (Eheverträge)</li>
+                        <li>Divorce and Separation Agreements (Trennungs- und Scheidungsfolgenvereinbarungen)</li>
+                        <li>Adoptions (Stepchild and Adult Adoptions)</li>
+                        <li>Partnership Agreements for unmarried couples</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inheritance Law -->
+    <section id="inheritance" class="service-detail-section">
+        <div class="container reveal">
+            <div class="service-row reverse">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800"
+                        alt="Inheritance Law">
+                </div>
+                <div class="service-content">
+                    <i class="fa-solid fa-scroll service-icon-large"></i>
+                    <h2>Inheritance Law</h2>
+                    <p>Properly planning your succession ensures that your wishes are respected and your loved ones are
+                        protected from legal conflicts and unforeseen tax burdens. A notarial will or inheritance
+                        contract is legally binding, cannot be lost, and often replaces the need for an expensive
+                        certificate of inheritance (Erbschein).</p>
+                    <p>We also strongly advise on precautionary measures for cases of incapacity.</p>
+
+                    <ul class="service-list">
+                        <li>Wills and Inheritance Contracts (Testamente und Erbverträge)</li>
+                        <li>Anticipated Succession (Vorweggenommene Erbfolge) & Gifts</li>
+                        <li>Precautionary Powers of Attorney (Vorsorgevollmachten)</li>
+                        <li>Living Wills / Advance Directives (Patientenverfügungen)</li>
+                        <li>Applications for Certificates of Inheritance</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-scale-balanced" style="color: var(--accent-color);"></i>
+                        <div>
+                            Notar<span style="color: rgba(255,255,255,0.7)">Web</span>
+                        </div>
+                    </a>
+                    <p>Providing legal certainty with trust and clarity for all your real estate, corporate, family, and inheritance matters.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:15566284478">15566284478</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@notarweb-example.com">info@notarweb-example.com</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="process.html">Process & Fees</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <a href="imprint.html">Legal Notice (Imprint)</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms and Conditions</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NotarWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
