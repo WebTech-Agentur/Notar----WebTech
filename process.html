@@ -24,6 +24,30 @@
             position: relative;
         }
 
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/process-hero.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1,
+        .page-header p {
+            color: #ffffff !important;
+        }
+
         .process-timeline {
             position: relative;
             max-width: 800px;
@@ -140,7 +164,7 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="header">
+    <header class="header" id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -149,28 +173,25 @@
                 </div>
             </a>
 
+            <div class="nav-content">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="services.html">Leistungen</a></li>
+                        <li><a href="process.html" class="active">Ablauf & Kosten</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="contact.html" class="btn btn-outline"
+                        style="padding: 8px 16px; font-size: 0.9rem;">Beratung</a>
+                </div>
+            </div>
+
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Startseite</a></li>
-                    <li><a href="about.html">Über uns</a></li>
-                    <li><a href="services.html">Leistungen</a></li>
-                    <li><a href="process.html" class="active">Ablauf & Kosten</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-            <div class="header-cta">
-                <a href="contact.html" class="btn btn-outline"
-                    style="padding: 8px 16px; font-size: 0.9rem;">Beratung</a>
-            </div>
-        </div>
-
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
         </div>
     </header>
 
@@ -253,7 +274,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 2rem;">
-                <a href="contact.html" class="btn btn-primary">Start the Process Today</a>
+                <a href="contact.html" class="btn btn-primary">Starten Sie den Prozess noch heute</a>
             </div>
         </div>
     </section>
@@ -263,38 +284,39 @@
         <div class="container">
             <div class="fees-section reveal">
                 <div class="fees-content">
-                    <h2>Transparent & Statutory Fees</h2>
-                    <p>Notaries do not negotiate individual hourly rates. Notary fees in Germany are strictly regulated
-                        by law to ensure absolute neutrality and equal access to justice.</p>
+                    <h2>Transparente & Gesetzliche Gebühren</h2>
+                    <p>Notare verhandeln keine individuellen Stundensätze. Notargebühren sind in Deutschland streng
+                        gesetzlich geregelt, um absolute Neutralität und gleichen Zugang zum Recht zu gewährleisten.</p>
 
                     <div class="fees-box">
-                        <h3>The Court and Notary Costs Act (GNotKG)</h3>
-                        <p>All notarial fees are calculated exclusively based on the <strong>Court and Notary Costs Act
-                                (Gerichts- und Notarkostengesetz - GNotKG)</strong>. The fees are not determined by the
-                            amount of time spent on your case, but by the so-called "business value" (Geschäftswert) of
-                            the transaction.</p>
+                        <h3>Das Gerichts- und Notarkostengesetz (GNotKG)</h3>
+                        <p>Alle Notargebühren berechnen sich ausschließlich nach dem <strong>Gerichts- und
+                                Notarkostengesetz (GNotKG)</strong>. Die Gebühren richten sich nicht nach dem
+                            Zeitaufwand, sondern nach dem sogenannten "Geschäftswert" der Angelegenheit.</p>
 
                         <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
-                            <strong>Examples of Business Value:</strong> For a property purchase, it is the purchase
-                            price. For a GmbH formation, it is the share capital. For an inheritance contract, it is the
-                            net value of the estate.
+                            <strong>Beispiele für den Geschäftswert:</strong> Bei einem Immobilienkauf ist es der
+                            Kaufpreis. Bei der Gründung einer GmbH ist es das Stammkapital. Bei einem Erbvertrag ist es
+                            der Reinwert des Nachlasses.
                         </p>
 
                         <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
-                            <strong>Inclusive Services:</strong> The statutory fee for a notarization (Beurkundung)
-                            generally includes the comprehensive preliminary consultation, draft preparation, the actual
-                            recording appointment, and the provision of standard copies.
+                            <strong>Inklusive Leistungen:</strong> Die gesetzliche Gebühr für eine Beurkundung umfasst
+                            in der Regel die umfassende Vorberatung, die Entwurfserstellung, den eigentlichen
+                            Beurkundungstermin und die Erteilung von Standardabschriften.
                         </p>
 
                         <p><i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i>
-                            <strong>Execution Costs:</strong> Additional, smaller fees apply for our activities in
-                            executing the document (Vollzugsgebühren) and for expenditures (telephone, postage).
+                            <strong>Vollzugskosten:</strong> Für unsere Tätigkeiten im Vollzug der Urkunde
+                            (Vollzugsgebühren) und für Auslagen (Telefon, Porto) fallen zusätzliche, geringere Gebühren
+                            an.
                         </p>
 
                         <br>
-                        <p style="font-style: italic; color: var(--text-light);">We understand that costs are a concern.
-                            We are happy to provide you with an estimated calculation of the expected notary and court
-                            fees prior to your appointment based on the anticipated business value.</p>
+                        <p style="font-style: italic; color: var(--text-light);">Wir verstehen, dass Kosten ein
+                            wichtiges Thema sind. Gerne erstellen wir Ihnen vor Ihrem Termin eine geschätzte Berechnung
+                            der voraussichtlichen Notar- und Gerichtsgebühren auf Basis des erwarteten Geschäftswertes.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -312,15 +334,15 @@
                             Notar<span style="color: rgba(255,255,255,0.7)">Web</span>
                         </div>
                     </a>
-                    <p>Providing legal certainty with trust and clarity for all your real estate, corporate, family, and
-                        inheritance matters.</p>
+                    <p>Wir bieten Rechtssicherheit mit Vertrauen und Klarheit für alle Ihre Immobilien-, Gesellschafts-,
+                        Familien- und Erbschaftsangelegenheiten.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3>Kontakt</h3>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia</p>
+                        <p>Kronenweg 19<br>Wesseling<br>Nordrhein-Westfalen</p>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-phone"></i>
@@ -333,24 +355,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="process.html">Process & Fees</a>
-                    <a href="contact.html">Contact</a>
+                    <h3>Schnellzugriff</h3>
+                    <a href="index.html">Startseite</a>
+                    <a href="about.html">Über uns</a>
+                    <a href="services.html">Leistungen</a>
+                    <a href="process.html">Ablauf & Kosten</a>
+                    <a href="contact.html">Kontakt</a>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Legal</h3>
-                    <a href="imprint.html">Legal Notice (Imprint)</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms and Conditions</a>
+                    <h3>Rechtliches</h3>
+                    <a href="imprint.html">Impressum</a>
+                    <a href="privacy.html">Datenschutz</a>
+                    <a href="terms.html">AGB</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 NotarWeb. All rights reserved.</p>
+                <p>&copy; 2026 NotarWeb. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>

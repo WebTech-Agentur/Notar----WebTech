@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,30 @@
             padding: 12rem 0 4rem;
             text-align: center;
             position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/contact-hero.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1,
+        .page-header p {
+            color: #ffffff !important;
         }
 
         .contact-grid {
@@ -157,7 +181,7 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="header">
+    <header class="header" id="main-header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -166,21 +190,19 @@
                 </div>
             </a>
 
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process & Fees</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                                    </ul>
+            <div class="nav-content">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="services.html">Leistungen</a></li>
+                        <li><a href="process.html">Ablauf & Kosten</a></li>
+                        <li><a href="contact.html" class="active">Kontakt</a></li>
+                    </ul>
                 </nav>
                 <div class="header-cta">
-                    <a href="contact.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">Consultation</a>
+                    <a href="contact.html" class="btn btn-outline"
+                        style="padding: 8px 16px; font-size: 0.9rem;">Beratung</a>
                 </div>
             </div>
 
@@ -193,9 +215,9 @@
     <!-- Page Header -->
     <div class="page-header">
         <div class="container page-header-content">
-            <h1>Contact & Appointments</h1>
-            <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">We are here to assist you.
-                Schedule a consultation easily online, or reach out to our office via phone or email.</p>
+            <h1>Kontakt & Termine</h1>
+            <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">Wir sind für Sie da. Buchen Sie
+                online einen Beratungstermin oder kontaktieren Sie unser Büro telefonisch oder per E-Mail.</p>
         </div>
     </div>
 
@@ -203,29 +225,28 @@
         <div class="container">
             <!-- Calendly Direct Integration -->
             <div class="calendly-section reveal">
-                <h2>Direct Online Booking</h2>
-                <p style="margin-bottom: 2rem;">Save time and securely select the most convenient appointment slot for
-                    your initial consultation.</p>
-                <a href="contact.html"
-                    class="btn btn-accent" style="font-size: 1.2rem; padding: 15px 40px;">
-                    <i class="fa-regular fa-calendar-check" style="margin-right: 10px;"></i> Open Booking Calendar
+                <h2>Direkte Online-Buchung</h2>
+                <p style="margin-bottom: 2rem;">Sparen Sie Zeit und wählen Sie sicher den passenden Termin für Ihre
+                    Erstberatung.</p>
+                <a href="contact.html" class="btn btn-accent" style="font-size: 1.2rem; padding: 15px 40px;">
+                    <i class="fa-regular fa-calendar-check" style="margin-right: 10px;"></i> Buchungskalender öffnen
                 </a>
             </div>
 
             <div class="contact-grid">
                 <!-- Contact Info -->
                 <div class="contact-info-cards reveal">
-                    <h2>Our Office Details</h2>
-                    <p style="margin-bottom: 1.5rem;">If you prefer conventional methods, our team is readily available
-                        to answer your call or respond to your written inquiries.</p>
+                    <h2>Unsere Büroadetails</h2>
+                    <p style="margin-bottom: 1.5rem;">Wenn Sie konventionelle Wege bevorzugen, steht unser Team gerne
+                        zur Verfügung, um Ihren Anruf entgegenzunehmen oder schriftliche Anfragen zu beantworten.</p>
 
                     <div class="info-card">
                         <div class="info-card-icon">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="info-card-content">
-                            <h3>Address</h3>
-                            <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia, Germany</p>
+                            <h3>Adresse</h3>
+                            <p>Kronenweg 19<br>Wesseling<br>Nordrhein-Westfalen, Deutschland</p>
                         </div>
                     </div>
 
@@ -234,9 +255,9 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="info-card-content">
-                            <h3>Telephone</h3>
+                            <h3>Telefon</h3>
                             <a href="tel:15566284478" style="font-weight: 600; font-size: 1.2rem;">15566284478</a>
-                            <p style="font-size: 0.9rem; margin-top: 5px;">Mon-Fri: 9:00 AM - 5:30 PM</p>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">Mo-Fr: 09:00 - 17:30 Uhr</p>
                         </div>
                     </div>
 
@@ -245,51 +266,52 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div class="info-card-content">
-                            <h3>Email</h3>
+                            <h3>E-Mail</h3>
                             <a href="mailto:info@notarweb-example.com">info@notarweb-example.com</a>
-                            <p style="font-size: 0.9rem; margin-top: 5px;">We guarantee a response within 24h.</p>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">Wir garantieren eine Antwort innerhalb von 24
+                                Stunden.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div class="contact-form-container reveal">
-                    <h2 style="margin-bottom: 1.5rem;">Send an Inquiry</h2>
+                    <h2 style="margin-bottom: 1.5rem;">Anfrage senden</h2>
                     <form class="contact-form" action="#" method="POST"
-                        onsubmit="event.preventDefault(); alert('Thank you for your inquiry. This is a front-end demo.');">
+                        onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Anfrage. Dies ist eine Demo.');">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
+                            <label for="name">Vollständiger Name</label>
                             <input type="text" id="name" name="name" required placeholder="Dr. John Doe">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="email">E-Mail Adresse</label>
                             <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number (Optional)</label>
+                            <label for="phone">Telefonnummer (Optional)</label>
                             <input type="tel" id="phone" name="phone" placeholder="+49 155...">
                         </div>
 
                         <div class="form-group">
-                            <label for="subject">Area of Interest</label>
+                            <label for="subject">Interessenbereich</label>
                             <select id="subject" name="subject">
-                                <option value="real_estate">Real Estate Law</option>
-                                <option value="corporate">Corporate Law</option>
-                                <option value="family">Family Law</option>
-                                <option value="inheritance">Inheritance Law</option>
-                                <option value="other">Other Inquiry</option>
+                                <option value="real_estate">Immobilienrecht</option>
+                                <option value="corporate">Gesellschaftsrecht</option>
+                                <option value="family">Familienrecht</option>
+                                <option value="inheritance">Erbrecht</option>
+                                <option value="other">Sonstige Anfrage</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Your Message</label>
+                            <label for="message">Ihre Nachricht</label>
                             <textarea id="message" name="message" rows="5" required
-                                placeholder="How can we assist you?"></textarea>
+                                placeholder="Wie können wir Ihnen helfen?"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Anfrage absenden</button>
                     </form>
                 </div>
             </div>
@@ -316,14 +338,15 @@
                             Notar<span style="color: rgba(255,255,255,0.7)">Web</span>
                         </div>
                     </a>
-                    <p>Providing legal certainty with trust and clarity for all your real estate, corporate, family, and inheritance matters.</p>
+                    <p>Wir bieten Rechtssicherheit mit Vertrauen und Klarheit für alle Ihre Immobilien-, Gesellschafts-,
+                        Familien- und Erbschaftsangelegenheiten.</p>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3>Kontakt</h3>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p>19 Kronenweg<br>Wesseling<br>North Rhine-Westphalia</p>
+                        <p>Kronenweg 19<br>Wesseling<br>Nordrhein-Westfalen</p>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-phone"></i>
@@ -336,24 +359,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="process.html">Process & Fees</a>
-                    <a href="contact.html">Contact</a>
+                    <h3>Schnellzugriff</h3>
+                    <a href="index.html">Startseite</a>
+                    <a href="about.html">Über uns</a>
+                    <a href="services.html">Leistungen</a>
+                    <a href="process.html">Ablauf & Kosten</a>
+                    <a href="contact.html">Kontakt</a>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Legal</h3>
-                    <a href="imprint.html">Legal Notice (Imprint)</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms and Conditions</a>
+                    <h3>Rechtliches</h3>
+                    <a href="imprint.html">Impressum</a>
+                    <a href="privacy.html">Datenschutz</a>
+                    <a href="terms.html">AGB</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 NotarWeb. All rights reserved.</p>
+                <p>&copy; 2026 NotarWeb. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
@@ -362,7 +385,3 @@
 </body>
 
 </html>
-
-
-
-
