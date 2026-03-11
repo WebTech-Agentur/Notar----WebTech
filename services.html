@@ -88,6 +88,34 @@
             flex: 1;
         }
 
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .service-row {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .service-row.reverse {
+                flex-direction: column;
+            }
+
+            .service-icon-large {
+                margin: 0 auto 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 10rem 0 3rem;
+            }
+        }
+
         .service-icon-large {
             font-size: 3rem;
             color: var(--accent-color);

@@ -100,6 +100,19 @@
             flex-grow: 1;
         }
 
+        @media (max-width: 992px) {
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .intro-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
         .service-card .btn-link {
             color: var(--primary-color);
             font-weight: 600;
