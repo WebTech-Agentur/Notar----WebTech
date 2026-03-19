@@ -167,6 +167,66 @@
             margin-bottom: 2rem;
         }
 
+        .hero-text {
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tag {
+            color: #caa35c;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 36px);
+            margin: 15px 0;
+            color: #ffffff; /* Keep it white for readability on the dark background image */
+        }
+
+        .hero-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: #caa35c; /* Using the gold accent for primary action */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-right: 10px;
+            display: inline-block;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: #b38d50;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
         @media (max-width: 900px) {
             .intro-section {
                 flex-direction: column;
@@ -209,19 +269,16 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Rechtssicherheit mit Vertrauen und Klarheit</h1>
-                <p>Wir sorgen dafür, dass Ihre wichtigsten Lebensentscheidungen rechtlich abgesichert sind. Wir bieten
-                    kompetente Notardienstleistungen,
-                    zugeschnitten auf Ihre individuellen und unternehmerischen Bedürfnisse.</p>
-                <div class="hero-btns">
-                    <!-- Fixing direct link to contact page instead of broken calendly JS widget in this static view, per user request to redirect directly to booking page -->
-                    <a href="contact.html" class="btn btn-accent">
-                        Online-Termin buchen
-                    </a>
-                    <a href="services.html" class="btn btn-outline" style="color: white; border-color: white;">
-                        Unsere Leistungen
-                    </a>
+            <div class="hero-text">
+                <span class="tag">WILLKOMMEN</span>
+                <h1>Rechtssicherheit, auf die Sie sich verlassen können</h1>
+                <p>
+                    Kompetente notarielle Beratung für Immobilien, Unternehmen und private Anliegen.
+                    Schnell, präzise und absolut vertraulich.
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn-primary">Termin vereinbaren</a>
+                    <a href="services.html" class="btn-secondary">Mehr erfahren</a>
                 </div>
             </div>
         </div>
